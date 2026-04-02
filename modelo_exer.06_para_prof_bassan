@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Prof Roger Bassan | 00</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #06 para prof bassan</h1>
+        <h2>Disciplina de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p>Verificar a nota do aluno e a frequência do aluno se está aprovado ou reprovado</p>
+        <input type="number" id="nota" placeholder="Digite a nota">
+        <br></br>
+        <input type="number" id="porcetagem" placeholder="Digite a porcetagem">
+        <br></br>
+        <button onclick="somamedia()">Enviar</button>
+    </div>
+</body>
+    <script>
+        function somamedia()
+    {
+        var nota = parseInt(document.querySelector('#nota').value);
+        var porcetagem = parseInt(document.querySelector('#porcetagem').value);
+        var soma = nota;
+        var media = soma / 1;
+        if (nota >= 10 && porcetagem >= 80){
+        alert ('aluno aprovado');}
+        else{
+        alert ('aluno reprovado');}        
+        }    
+</script>
+</html>
