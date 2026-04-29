@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Eduardo Leal | 12</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #12</h1>
+        <h2>Disciplina de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p>Digite os valores solicitados para descobrir sua idade em dias </p>
+        <input type="number" id = 'Anos' placeholder="Digite quantos anos você possui">
+        <br><br>
+        <input type="number" id = 'Meses' placeholder="Digite quantos meses você possui">
+        <br><br>
+        <input type="number" id = 'Dias' placeholder="Digite quantos dias você possui">
+        <br><br>
+
+        <button onclick = 'calculo()'>Enviar</button>
+    </div>
+        
+</body> 
+    <script>
+        function calculo()  
+        {
+            
+            const DiasPorAno = 365;
+            const DiasPorMes = 30;
+            
+            var DiasMes = parseFloat(document.querySelector('#Meses').value) * DiasPorMes;
+            var DiasAno = parseFloat(document.querySelector('#Anos').value) * DiasPorAno;
+            var DiasTotal = parseFloat(document.querySelector('#Dias').value) + DiasMes + DiasAno;
+            
+
+            alert('Você posui ' + DiasTotal + ' Dias');
+            
+            
+        }
+
+
+
+
+
+    </script>    
+
+
+</html>
