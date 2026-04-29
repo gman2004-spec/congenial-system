@@ -54,42 +54,21 @@
     <div class="box-nav">
         <h1>EXERCÍCIO #13</h1>
         <h2>Disciplina de Algoritmos</h2>
+        <p>Faça um algoritmo em javascript que imigra a média arimética dos números 8,9 e 7. A média dos números 4,5 e 6. as soma das duas médias</p>
     </div>
-    <div class="box">
-        <p>Digite os valores solicitados para descobrir sua idade em dias </p>
-        <input type="number" id = 'Anos' placeholder="Digite quantos anos você possui">
-        <br><br>
-        <input type="number" id = 'Meses' placeholder="Digite quantos meses você possui">
-        <br><br>
-        <input type="number" id = 'Dias' placeholder="Digite quantos dias você possui">
-        <br><br>
-
-        <button onclick = 'calculo()'>Enviar</button>
-    </div>
-        
+    
 </body> 
-    <script>
-        function calculo()  
-        {
-            
-            const DiasPorAno = 365;
-            const DiasPorMes = 30;
-            
-            var DiasMes = parseFloat(document.querySelector('#Meses').value) * DiasPorMes;
-            var DiasAno = parseFloat(document.querySelector('#Anos').value) * DiasPorAno;
-            var DiasTotal = parseFloat(document.querySelector('#Dias').value) + DiasMes + DiasAno;
-            
+    <script> 
+            const media1 = (8 + 9 + 7) / 3;
+            console.log('Média dos números 8, 9 e 7: ${media1}');
 
-            alert('Você posui ' + DiasTotal + ' Dias');
-            
-            
-        }
+            const media2 = (4 + 5 + 6) / 3;
+            console.log('Média dos números 4, 5 e 6: ${media2}');
 
+            const somaMedias = media1 + media2;
+            console.log('Soma das duas médias ${somaMedias}');
 
-
-
-
+            const mediaMedias = media1 + media2;
+            console.log('Média das médias: ${mediaMedias}');
     </script>    
-
-
 </html>
