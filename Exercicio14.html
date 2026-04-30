@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Aula 13</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #14</h1>
+        <h2>Disciplina de Algoritmos</h2>
+        <p>Escreva um algoritmo em javascript que calcule os gastos com alimentação e
+transporte de um aluno durante um mês e apresente o resultado total e a média
+diária.</p>
+            <input type="number" id="alimentacao" placeholder="Digite o valor gasto com alimentação no mês">
+            <input type="number" id="transporte" placeholder="Digite o valor gasto com trasnporte no mês">
+            <br></br>
+
+            <button onclick="calcular()">Enviar</button>
+    </div>
+    
+</body> 
+    <script> 
+        function calcular()
+        {
+            var gastoAlimentacao = parseFloat(document.querySelector('#alimentacao').value);
+            var gastoTransporte = parseFloat(document.querySelector('#transporte').value);
+
+            var gastoTotal = gastoAlimentacao + gastoTransporte;
+
+            var mediaDiaria = gastoTotal / 30;
+
+            console.log("O total de gastos no mês é de R$" + gastoTotal.toFixed(2) + ".");
+            console.log("A média diária de gastos é de R$" + mediaDiaria.toFixed(2) + ".");
+
+            alert('O total de gastos no mês é de R$  ' + gastoTotal.toFixed(2) + ' e a média diária de gastos é de R$ ' + mediaDiaria.toFixed(2))
+        }
+    </script>    
+</html>
