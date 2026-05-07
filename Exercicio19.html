@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Aula 19</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #19</h1>
+        <h2>Disciplina de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p>Faça um Programa em javascript que verifique se uma letra digitada é vogal ou
+consoante.</p>
+        <input type="text" id = 'letra' placeholder="Digite a letra">
+        <br><br>
+
+        <button onclick = 'verificar()'>Enviar</button>
+    </div>    
+</body> 
+<script>
+
+    function verificar()
+    {
+        let letra = document.getElementById("letra").value; 
+       if (letra.length !== 1){
+        alert("Digite apenas UMA letra!");
+        return;
+       }
+       letra = letra.toLowerCase();
+
+       if (letra < 'a'|| letra > 'z') {
+        alert("Digite apenas letras!");
+        return;
+       }
+       if ("aeiou".includes(letra)) {
+        alert("É uma vogal");
+       } else {
+        alert("É uma consoante");
+       }
+    }
+</script>
+</html>
