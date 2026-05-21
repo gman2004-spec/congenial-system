@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Aula 22</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #27</h1>
+        <h2>Disciplina de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p>Faça um algoritmo em javascript que capaz de gerar a tabuada de qualquer
+número inteiro Num1 (entre 1 a 10). O usuário deve informar de qual numero ele
+deseja ver a tabuada.</p>
+    <select type="number" id="nr">
+            <option value="1" >1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>
+            <option value="4" >4</option>
+            <option value="5" >5</option>
+            <option value="6" >6</option>
+            <option value="7" >7</option>
+            <option value="8" >8</option>
+            <option value="9" >9</option>
+            <option value="10"> 10</option>
+    </select> 
+        <br><br>
+    <button onclick="calcular()">Enviar</button>
+</div>
+</body>
+<script>
+    function calcular() {
+        
+        var num1 = parseInt(document.querySelector('#nr').value);
+
+        if (num1 >= 1 && num1 <= 10) {
+
+            console.log("Tabuada do número " + num1 + ":");
+            for (var i = 1; i <= 10; i++) {
+                var resultado = num1 * i;
+                console.log(num1 + " x " + i + " = " + resultado);
+            }
+        } else {
+            console.log("Número inválido. Por favor, digite um número entre 1 e 10.");
+        }
+    }
+</script>
+</html>        
