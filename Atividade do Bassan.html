@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Aula 19</title>
+    <title>Atividade do Bassan</title>
     <style>
         body{
             background-color: cornflowerblue;
@@ -50,37 +50,38 @@
     </style>
 
 </head>
+</body>
 <body>
+
     <div class="box-nav">
         <h1>Trabalho avulso</h1>
         <h2>para professor Bassan</h2>
     </div>
+
     <div class="box">
-        <p>Receba a distância percorrida por uma pessoa em km durante uma semana. Considere que ela caminhou a mesma distância todos os dias.</p>
-        <input type="number" id ="distância" placeholder="Digite a total percorrida">
-        <p id="resultMédia"></p>
-        <br></br>
+        <p>Mostra a tabela de matemática.</p>
+        <input type="number" id="num" placeholder="Digite a todas as tabelas">
+        <br><br>
 
-        <button onclick = 'calcular()'>Enviar</button>
+        <button onclick="gerarTabela()">Enviar</button>
     </div>    
-</body> 
-<script>
 
-    function calcular()
-    {
-        var distSemana = [5.2, 3.0, 0.0, 55.0, 4.5];
+    <script>
+        function gerarTabela(){
+       let num1 = parseInt(document.getElementById("num").value);
+       if (num1 >= 1) {
+        let mensagem = "resultado da tabela" + num1 + ":\n\n";
 
-        var distTotal = distSemana.reduce((acc, curr) => acc + curr, 0);
+            let i = 0;
 
-        var mediaDiaria = distTotal / distSemana.length;
-
-        console.log("SEU DIA A DIA");
-        console.log(`Distância registradas: ${distSemana.join("km, ")}km`);
-        console.log(`Distância total percorrida: ${distTotal.toFixed(2)}km`);
-        console.log(`Média diária: ${mediaDiaria.toFixed(2)}km`);
-
-        console.table(distSemana);
-    }
-</script>
+       while (i < 11){
+        let result = num1 * i;
+        mensagem += num1 + ' x ' + i + ' = ' + result + "\n";
+        i++; 
+       }
+        alert(mensagem);
+       } 
+    }  
+    </script>
 </body>
 </html>
